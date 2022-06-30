@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
 
-route::get('tabla/articulo', 'App\Http\Controllers\ArticuloController@tablaarticulo')->name('tablas.tablaarticulo');
+route::get('articuloAJAX', 'App\Http\Controllers\ArticuloController@tablaarticulo')->name('articulos.articuloAJAX');
 
 Route::middleware([
     'auth:sanctum',

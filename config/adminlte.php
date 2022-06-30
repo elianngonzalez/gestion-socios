@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => 'CRUD laravel',
+    'logo' => 'Crub Madariaga',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -67,7 +67,7 @@ return [
     'usermenu_enabled' => true,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_image' => false, 
     'usermenu_desc' => false,
     'usermenu_profile_url' => false,
 
@@ -246,34 +246,29 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-        [
-            'text'        => 'Artículos',
+/*         [
+            'text'        => 'Articulo',
             'url'         => 'articulos',
             'icon'        => 'far fa-fw fa-file',
             'label'       => 'CRUD',
             'label_color' => 'warning',
-        ],
+        ],  */
         
-        ['header' => 'account_settings'],
-        [
-            'text' => 'Perfil de usuario',
-            'url'  => 'user/profile',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+      
 /*         [
             'text' => 'change_password',
             'url'  => 'admin/settings',
             'icon' => 'fas fa-fw fa-lock',
         ], */
-/*         [
-            'text'    => 'multilevel',
+        [
+            'text'    => 'Administración',
             'icon'    => 'fas fa-fw fa-share',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Socios',
+                    'url'  => 'articulos',
                 ],
-                [
+               /*  [
                     'text'    => 'level_one',
                     'url'     => '#',
                     'submenu' => [
@@ -300,9 +295,15 @@ return [
                 [
                     'text' => 'level_one',
                     'url'  => '#',
-                ],
+                ], */
             ],
-        ], */
+        ], 
+        ['header' => 'account_settings'],
+        [
+            'text' => 'Perfil de usuario',
+            'url'  => 'user/profile',
+            'icon' => 'fas fa-fw fa-user',
+        ],
 /*         ['header' => 'labels'],
         [
             'text'       => 'important',

@@ -47,7 +47,7 @@
 
     <a href='#modalCrear' class='btn btn-primary mb-3' data-toggle='modal'>Crear</a>
 
-    <table id='tablaarticulo' class='table table-striped table-bordered shadow-lg mt-4' style='width:100%'>
+    <table id='articulo' class='table table-striped table-bordered shadow-lg mt-4' style='width:100%'>
         
     <thead class='bg-primary text-white'>
             <tr>
@@ -64,25 +64,18 @@
 
 
 @section('css')
-<!-- Para iconos -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Se encuentra en: resourses/view/vendor/adminlte/master.blade.php linea 30-->
 
 @stop
 
 @section('js')
-    <script src='https://code.jquery.com/jquery-3.5.1.js'></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js" type="text/javascript"></script>
-
-    <script src='https://cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js'></script>
-    <script src='https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js'></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Se encuentra en: resourses/view/vendor/adminlte/master.blade.php linea 88-94 -->
     
     <script>
-        let rutaTabla = "{{route('tablas.tablaarticulo')}}";
+        let rutaTabla = "{{route('articulos.articuloAJAX')}}";
             
         $(document).ready(function(){
-            var table=$('#tablaarticulo').DataTable({
+            var table=$('#articulo').DataTable({
         "ajax": rutaTabla,
         "columns":[
             {data:'id'},  
