@@ -3,7 +3,7 @@
 @section('title', 'CRUD con laravel 9')
 
 @section('content_header')
-    <h1>Gestion de socios</h1>
+    <h1>Gestión de socios</h1>
 @stop
 
 @section('content')
@@ -37,16 +37,17 @@
         
         <!-- Contenido 2da pestaña -->    
         <div class="tab-pane fade" id="ing_socio" role="tabpanel">
-            <form>
+            <form action='/socios' method="POST">
+                @csrf
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="nombre">Nombre</label>
-                        <input type="text" class="form-control" id="nombre" >
+                        <input type="text" name="nombre" class="form-control" id="nombre" >
                     </div>
 
                     <div class="form-group col-md-5">
                         <label for="apellido">Apellido</label>
-                        <input type="text" class="form-control" id="apellido">
+                        <input type="text" name="apellido" class="form-control" id="apellido">
                     </div>
                 </div>
 
@@ -73,8 +74,8 @@
                         <div class="form-group">
                             <label for="nac">Lugar / Fecha de nacimiento</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="nac">
-                                <input type="date" class="form-control" id="nac">
+                                <input type="text" name="lugar_nac" class="form-control" id="lugar_nac">
+                                <input type="date" name="fecha_nac" class="form-control" id="fecha_nac" pattern="[0-9]{2}-[0-9]{2}-[0-9]{4}">
                             </div>
                         </div>
                     </div>
@@ -83,42 +84,42 @@
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="nacionalidad">Nacionalidad</label>
-                        <input type="text" class="form-control" id="nacionalidad">
+                        <input type="text" name="nacionalidad" class="form-control" id="nacionalidad">
                     </div>
 
                     <div class="form-group col-md-5">
                         <label for="profesion">Profesión</label>
-                        <input type="text" class="form-control" id="profesion">
+                        <input type="text" name="profesion" class="form-control" id="profesion">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="domicilio">Domicilio</label>
-                        <input type="text" class="form-control" id="domicilio">
+                        <input type="text" name="domicilio" class="form-control" id="domicilio">
                     </div>
 
                     <div class="form-group col-md-5">
                         <label for="email">E-MAIL</label>
-                        <input type="email" class="form-control" id="email">
+                        <input type="email" name="email" class="form-control" id="email">
                     </div>
                 </div>
 
                 <div class="form-row">
                     <div class="form-group col-md-4">
                         <label for="localidad">Localidad</label>
-                        <input type="text" class="form-control" id="localidad">
+                        <input type="text" name="localidad" class="form-control" id="localidad">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="postal">C.Postal</label>
-                        <input type="text" class="form-control" id="postal">
+                        <input type="text" name="postal" class="form-control" id="postal">
                     </div>
 
                     <div class="form-group col-md-4">
                         <label for="tel">Teléfono</label>
-                        <input type="text" class="form-control" id="tel1">
-                        <input type="text" class="form-control" id="tel2">
+                        <input type="text" name="tel_laboral" class="form-control" id="tel_laboral" placeholder="Laboral">
+                        <input type="text" name= "tel_residencia" class="form-control" id="tel_residencia" placeholder="Residencia">
                     </div>
                 </div>
 
@@ -145,13 +146,12 @@
                         </div>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-primary m-2">Crear</button>    
             </form>
         </div>
         <!-- Fin 2da pestaña -->
     </div>
 @stop
-
 
 @section('css')
     <!-- Se encuentra en: resourses/view/vendor/adminlte/master.blade.php linea 30-->

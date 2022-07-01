@@ -9,7 +9,5 @@ class Socio extends Model
 {
     use HasFactory;
     protected $table = 'socios';
-    protected $fillable = ['nombre', 'apellido', 'doc'];
-    //'fecha-nac', 'lugar-nac', 'nacionalidad', 'profesion', 'domicilio', 'email', 'tel-laboral', 'tel-residencia'
-    public $timestamps = false;
+    protected $fillable = ['nombre', 'apellido', 'doc', 'fecha_nac', 'lugar_nac', 'nacionalidad', 'profesion', 'domicilio', 'email', 'localidad', 'c_postal', 'tel_laboral', 'tel_residencia'];
 }

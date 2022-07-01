@@ -46,7 +46,26 @@ class SocioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $socios = new Socio();
+
+        $socios -> nombre         = $request -> get('nombre');
+        $socios -> apellido       = $request -> get('apellido');
+        $socios -> doc            = $request -> get('doc');
+        $socios -> fecha_nac      = $request -> get('fecha_nac');
+        $socios -> lugar_nac      = $request -> get('lugar_nac');
+        $socios -> nacionalidad   = $request -> get('nacionalidad');
+        $socios -> profesion      = $request -> get('profesion');
+        $socios -> domicilio      = $request -> get('domicilio');
+        $socios -> email          = $request -> get('email');
+        $socios -> tel_laboral    = $request -> get('tel_laboral');
+        $socios -> tel_residencia = $request -> get('tel_residencia');
+
+
+
+
+
+        $socios->save();
+        return redirect('/socios');
     }
 
     /**
