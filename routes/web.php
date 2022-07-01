@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
-Route::resource('articulos', 'App\Http\Controllers\ArticuloController');
+Route::resource('socios', 'App\Http\Controllers\SocioController');
 
-route::get('articuloAJAX', 'App\Http\Controllers\ArticuloController@tablaarticulo')->name('articulos.articuloAJAX');
+route::get('socioAJAX', 'App\Http\Controllers\SocioController@socio')->name('socioAJAX.socio');
 
 Route::middleware([
     'auth:sanctum',
