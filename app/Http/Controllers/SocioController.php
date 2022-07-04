@@ -66,7 +66,11 @@ class SocioController extends Controller
 
         $socios->save();
         return redirect('/socios');
-    }
+        
+        // TODO LO DE ARRIBA SE PUEDE RESUMIR ASÍ: ↓ 
+        //$vinculo = Vinculo::create($request->all());
+        //return redirect()->route('vinculos.index')
+       }
 
     /**
      * Display the specified resource.
